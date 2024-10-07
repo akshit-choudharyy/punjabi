@@ -2,7 +2,7 @@ import React from 'react';
 
 const FoodCard = ({ title, image, description, price }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-xl m-6 rounded-xl">
+    <div className="card bg-blue-100 w-96 shadow-xl m-8 rounded-xl">
       <figure className="flex justify-center">
         <img src={image} alt={title} className="w-full h-[250px] object-cover" />
       </figure>

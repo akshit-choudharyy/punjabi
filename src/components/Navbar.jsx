@@ -59,12 +59,12 @@ function Navbar() {
                             <details>
                                 <summary className="text-lg">Menu</summary>
                                 <ul className="w-[200px] flex flex-col items-center"> {/* Adjusted width and centered items */}
-                                    <li className="text-lg "><a  href='/menu' >Soups</a></li>
-                                    <li className="text-lg "><a href='/menu' >Chinese Starters</a></li>
-                                    <li className="text-lg "><a  href='/menu'>Noodles and Rice</a></li>
-                                    <li className="text-lg "><a href='/menu' >Momos</a></li>
-                                    <li className="text-lg "><a href='/menu' >Chopsuey</a></li>
-                                    <li className="text-lg "><a href='/menu' >Main Course</a></li>
+                                    <li className="text-lg "><a  href='/menu' >Noodles</a></li>
+                                    <li className="text-lg "><a href='/menu' >Tandoori Paratha</a></li>
+                                    <li className="text-lg "><a  href='/menu'>Barbeque</a></li>
+                                    <li className="text-lg "><a href='/menu' >Maggie</a></li>
+                                    
+                                   
                                 </ul>
                             </details>
                         </li>
@@ -72,7 +72,7 @@ function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-end flex items-center h-full"> {/* Ensure the end section takes full height */}
-                    <a href='/contact' className="btn bg-orange-300 text-white hover:bg-red-600 rounded-2xl px-6 flex items-center gap-2"><BiPhoneCall />Contact Us</a>
+                    <a href='/contact' className="btn bg-blue-300 text-white hover:bg-blue-800 rounded-2xl px-6 flex items-center gap-2"><BiPhoneCall />Contact Us</a>
                 </div>
             </div>
         </div>

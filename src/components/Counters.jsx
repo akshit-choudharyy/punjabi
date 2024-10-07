@@ -2,7 +2,7 @@ import React from 'react';
 
 const CounterCard = ({ title, image, description }) => {
   return (
-    <div className="card bg-base-100 w-[500px] h-[424px] shadow-xl m-4 carousel-item">
+    <div className="card bg-blue-100 w-[500px] h-[424px] shadow-xl m-4 carousel-item">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
