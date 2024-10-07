@@ -2,7 +2,7 @@ import React from 'react';
 
 const CounterCard = ({ title, image, description }) => {
   return (
-    <div className="card bg-base-100 w-[424px] h-[424px] shadow-xl m-6">
+    <div className="card bg-base-100 w-[500px] h-[424px] shadow-xl m-4 carousel-item">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
@@ -51,8 +51,10 @@ const Counters = () => {
             </div>
           );
         }
+        return null; // Avoid returning undefined for non-category items
       })}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 justify-items-center">
+
+      <div className="carousel w-full">
         {foodItems
           .filter(food => food.title) // Filter out category item
           .map((food, index) => (
@@ -63,6 +65,11 @@ const Counters = () => {
               description={food.description}
             />
           ))}
+      </div>
+      
+      <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+        <a href="#slide4" className="btn btn-circle">❮</a>
+        <a href="#slide2" className="btn btn-circle">❯</a>
       </div>
     </div>
   );
