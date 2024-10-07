@@ -19,7 +19,7 @@ function Banner() {
           className="max-w-sm rounded-lg shadow-2xl" 
         />
         <div>
-          <h1 className="text-5xl font-bold text-gray-50">The Punjabi Ladhawa</h1>
+          <h1 className="text-5xl font-bold text-gray-50">Punjabi Da Dhaba </h1>
           <p className="py-6 text-slate-50">
             Punjabi Ladhawa Restaurant offers a vibrant dining experience with authentic 
             Punjabi cuisine. Our menu features traditional dishes like butter chicken, 
