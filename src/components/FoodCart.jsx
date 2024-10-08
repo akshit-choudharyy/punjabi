@@ -1,6 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/CartSlice';
 
 const FoodCard = ({ title, image, description, price }) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ title, image, price }));
+  };
+
   return (
     <div className="card bg-blue-100 w-96 shadow-xl m-8 rounded-xl">
       <figure className="flex justify-center">
@@ -11,14 +19,23 @@ const FoodCard = ({ title, image, description, price }) => {
         <p className="mb-4">{description}</p>
         <div className="card-actions flex justify-between items-center">
           <div className="text-2xl font-bold text-black">₹{price}</div>
-          <button className="btn btn-primary">Buy Now</button>
+          <div className="flex space-x-4">
+            <button className="btn btn-primary" onClick={handleAddToCart}>
+              Add to Cart
+            </button>
+            <button className="btn btn-secondary" onClick={() => alert('Buying Now!')}>
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-const FoodContainer = () => {
+
+const FoodContainer = ({ onAddToCart }) => {
+  const dispatch = useDispatch();
   const foodItems = [
     {
       title: 'Ice-Cream',
@@ -117,13 +134,6 @@ const FoodContainer = () => {
       description: 'Authentic Bihari dish made with roasted flour balls and spicy mashed veggies',
       price: 150,
     },
-
-    
-
-    
-    
-    
-
     {
       title: 'Pizza',
       image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2018/05/paneer-pizza-recipe-1.jpg',
@@ -138,19 +148,31 @@ const FoodContainer = () => {
     },
     
   ];
+      const handleAddToCart = (item) => {
+        // Dispatch the add to cart action
+        dispatch(addToCart(item)); // You can also pass the quantity if needed
+        onAddToCart(item); // Call the prop function to show the toast notification
+      };
+
 
   return (
-    <div className="container mx-auto flex flex-wrap justify-center mt-8">
-      {foodItems.map((food, index) => (
-        <FoodCard
-          key={index}
-          title={food.title}
-          image={food.image}
-          description={food.description}
-          price={food.price}
-        />
-      ))}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+  {foodItems.map((item) => (
+    <div key={item.id} className="p-4 bg-blue-100 shadow-md rounded-lg">
+      <img src={item.image} alt={item.title} className="w-full h-48 object-cover rounded-lg" />
+      <h2 className="text-xl font-bold mt-2">{item.title}</h2>
+      <p className="mt-1 text-gray-700">{item.description}</p> {/* Add this line for description */}
+      <p className="mt-1">Price: ₹{item.price}</p>
+      <button
+        className="btn btn-primary mt-4"
+        onClick={() => handleAddToCart(item)}
+      >
+        Add to Cart
+      </button>
     </div>
+  ))}
+</div>
+
   );
 };
 
