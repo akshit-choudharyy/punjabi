@@ -72,7 +72,7 @@ function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-end flex items-center h-full"> {/* Ensure the end section takes full height */}
-                    <a href='/contact' className="btn bg-blue-300 text-white hover:bg-blue-800 rounded-2xl px-6 flex items-center gap-2"><BiPhoneCall />Contact Us</a>
+                    <a href='/contact' className="btn bg-blue-800 text-white hover:bg-blue-300 rounded-2xl px-6 flex items-center gap-2"><BiPhoneCall />Contact Us</a>
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ function Banner() {
             Enjoy a warm, welcoming atmosphere perfect for family gatherings and celebrations. 
             Visit us for a taste of Punjab!
           </p>
-          <button className="btn btn-active bg-blue-400">Get Started</button>
+          <button className="btn btn-active bg-blue-500">Get Started</button>
         </div>
       </div>
     </div>
