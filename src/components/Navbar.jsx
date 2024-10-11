@@ -59,10 +59,10 @@ function Navbar() {
                             <details>
                                 <summary className="text-lg">Menu</summary>
                                 <ul className="w-[200px] flex flex-col items-center"> {/* Adjusted width and centered items */}
-                                    <li className="text-lg "><a  href='/menu' >Noodles</a></li>
-                                    <li className="text-lg "><a href='/menu' >Tandoori Paratha</a></li>
-                                    <li className="text-lg "><a  href='/menu'>Barbeque</a></li>
-                                    <li className="text-lg "><a href='/menu' >Maggie</a></li>
+                                    <li className="text-lg "><a  href='/' >Noodles</a></li>
+                                    <li className="text-lg "><a href='/' >Tandoori Paratha</a></li>
+                                    <li className="text-lg "><a  href='/'>Barbeque</a></li>
+                                    <li className="text-lg "><a href='/' >Maggie</a></li>
                                     
                                    
                                 </ul>

@@ -42,7 +42,7 @@ function Menu() {
           <div className="max-w-screen-2xl w-full xl:px-20 px-4 mx-auto flex flex-col py-12 md:py-24 items-center gap-8 relative">
             <div className="w-full space-y-7 px-4 text-center flex flex-col items-center">
             <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug text-white">
-              Discover the rich flavours of China
+              Discover the Punjabi Da dhaba 
               <span className="text-yellow px-2"></span>
             </h2>
             <p className="text-base md:text-xl text-white">
